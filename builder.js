@@ -1,4 +1,5 @@
 
+
 var mainEntreeMenu = {
   pizza : 6.29,
   hamburbger: 8.25,
@@ -21,7 +22,7 @@ function greeting() {
 };
 
 function clientOrder() {
-  var total = 0.0;
+  var total = 0;
   greeting()
   var entreeSelection = prompt('Please select an entree from the entree menu');
   
@@ -44,7 +45,7 @@ function clientOrder() {
      let lassana = mainEntreeMenu.lassana
      alert(
       `and the price for this item is $${lassana}`
-     )
+     ) 
   }
 
   
@@ -61,15 +62,30 @@ function clientOrder() {
   }else if (firtSide === 'apples') {
     total += sidesMenu.apples
     let apples = sidesMenu.apples 
-    alert(`fries are $${apples} also`)
+    alert(`apples are $${apples} also`)
   }
   
 
-  alert(`I tried the ${firtSide} earlier today and it was delicious!'`);
+  alert(`I tried the ${firtSide} earlier today and they were delicious!'`);
 
   var secondSide = prompt('Okay now what would you like for your second side?');
 
+  if (secondSide === 'fries') {
+    total += sidesMenu.fries
+    let fries = sidesMenu.fries 
+    alert(`fries are $${fries}.`)
+  } else if (secondSide === 'potatos') {
+    total += sidesMenu.potatos
+    let potatos = sidesMenu.potatos 
+    alert(`the potatos are $${potatos}.`)
+  }else if (secondSide === 'apples') {
+    total += sidesMenu.apples
+    let apples = sidesMenu.apples 
+    alert(`apples are $${apples}.`)
+  }
+
   alert(`Great choice! I will now go ahead and place your order`);
+  alert(`Thank you for dinning with us, we hope to see you soon! Your total bill today is $${(total.toFixed(2))}`)
   
 }
 // function price(entreeSelection) {
